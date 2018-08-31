@@ -1,17 +1,17 @@
 
 SlashCmdList['HERO_MOUNT'] = function()
-	if (UnitLevel("player") < 20) then
-		CastSpellByName("Bécane avec chauffeur")
-		return
-	end
-	
 	if (IsMounted()) then
 		Dismount()
 		return
 	end
 	
-	timer, initial, maxvalue, scale, paused, label = GetMirrorTimerInfo(2)
-	if (pause == 0) then
+	if (UnitLevel("player") < 20) then
+		CastSpellByName("Invocation d’un chauffeur")
+		return
+	end
+	
+	timer, initial, maxvalue, scale, paused, label = GetMirrorTimerInfo(2)	
+	if (timer == 'BREATH' and paused == 0) then
 		-- breath timer is running: player is underwater
 		CastSpellByName("Raie de la Grande mer")
 		return
@@ -25,4 +25,4 @@ SlashCmdList['HERO_MOUNT'] = function()
 	CastSpellByName("Seigneur corbeau")
 end
 
-SLASH_HERO_MOUNT = '/heromount'
+SLASH_HERO_MOUNT1 = '/heromount'
