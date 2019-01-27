@@ -1,4 +1,4 @@
-local function has_value (tab, val)
+local function has_value(tab, val)
     for index, value in ipairs(tab) do
         if value == val then
             return true
@@ -21,6 +21,10 @@ SlashCmdList['HERO_MOUNT'] = function()
 		CastSpellByName("Invocation d’un chauffeur")
 		return
 	end
+	
+	if (IsSpellKnown(34090) == false) then
+		CastSpellByName("Seigneur corbeau")
+	end	
 	
 	zone = GetRealZoneText()
 	if (has_value(forceGroundMountZones, zone)) then
