@@ -22,9 +22,10 @@ SlashCmdList['HERO_MOUNT'] = function()
 		return
 	end
 	
-	if (IsSpellKnown(34090) == false) then
+	if (UnitLevel("player") < 60) then
 		CastSpellByName("Seigneur corbeau")
-	end	
+		return
+	end
 	
 	zone = GetRealZoneText()
 	if (has_value(forceGroundMountZones, zone)) then
