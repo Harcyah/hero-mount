@@ -1,4 +1,4 @@
-# wow-hero-mount
+# hero-mount
 
 Adds a /heromount command, which casts a different mount based on player location.
 
