@@ -8,7 +8,8 @@ local function has_value(tab, val)
 end
 
 local forceGroundMountZones = {
-	'Séjour céleste'
+	'Séjour céleste',
+	"Mac’Aree"
 }
 
 SlashCmdList['HERO_MOUNT'] = function()
