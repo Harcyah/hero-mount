@@ -1,4 +1,4 @@
 ## Title: HeroMount
-## Interface: 80100
+## Interface: 80200
 ## Notes: Adds a /heromount command which mount flyable/swimming/ground mount
 HeroMount.lua
