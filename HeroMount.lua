@@ -9,8 +9,7 @@ end
 
 local forceGroundMountZones = {
 	'Séjour céleste',
-	"Mac’Aree",
-	"Nazjatar"
+	"Mac’Aree"
 }
 
 SlashCmdList['HERO_MOUNT'] = function()
