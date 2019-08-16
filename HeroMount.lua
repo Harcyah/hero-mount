@@ -40,11 +40,6 @@ SlashCmdList['HERO_MOUNT'] = function()
 		return
 	end
 	
-	if (IsFlyableArea() and IsInGroup()) then
-		CastSpellByName("Drake de grès")
-		return
-	end
-	
 	if (IsFlyableArea()) then
 		CastSpellByName("Expérience 12-B")
 		return
