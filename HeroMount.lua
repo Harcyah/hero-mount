@@ -12,6 +12,9 @@ local forceGroundMountZones = {
 	"Mac’Aree"
 }
 
+local GROUND_MOUNT = "Seigneur corbeau";
+local FLYING_MOUNT = "Expérience 12-B";
+
 SlashCmdList['HERO_MOUNT'] = function()
 
 	if (IsMounted()) then
@@ -25,18 +28,23 @@ SlashCmdList['HERO_MOUNT'] = function()
 	end
 
 	if (UnitLevel("player") < 60) then
-		CastSpellByName("Seigneur corbeau")
+		CastSpellByName(GROUND_MOUNT)
+		return
+	end
+
+	if (IsShiftKeyDown()) then
+		CastSpellByName(GROUND_MOUNT)
 		return
 	end
 
 	local name, instanceType = GetInstanceInfo()
 	if (instanceType == "scenario") then
-		CastSpellByName("Seigneur corbeau")
+		CastSpellByName(GROUND_MOUNT)
 	end
 
 	local zone = GetRealZoneText()
 	if (has_value(forceGroundMountZones, zone)) then
-		CastSpellByName("Seigneur corbeau")
+		CastSpellByName(GROUND_MOUNT)
 	end
 
 	local timer, initial, maxvalue, scale, paused, label = GetMirrorTimerInfo(2)
@@ -47,11 +55,11 @@ SlashCmdList['HERO_MOUNT'] = function()
 	end
 
 	if (IsFlyableArea()) then
-		CastSpellByName("Expérience 12-B")
+		CastSpellByName(FLYING_MOUNT)
 		return
 	end
 
-	CastSpellByName("Seigneur corbeau")
+	CastSpellByName(GROUND_MOUNT)
 end
 
 SLASH_HERO_MOUNT1 = '/heromount'
