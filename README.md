@@ -1,6 +1,6 @@
 # hero-mount
 
-Adds a /heromount command, which casts a different mount based on player location.
+A world of warcraft addon, which adds a `/heromount` command, which casts a different mount based on player location.
 
 - Under level 20 : driver mount
 - Swimming underwater : aquatic mount
