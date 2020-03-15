@@ -12,8 +12,8 @@ local forceGroundMountZones = {
 	"Mac’Aree"
 }
 
-local GROUND_MOUNT = "Seigneur corbeau";
-local FLYING_MOUNT = "Expérience 12-B";
+local GROUND_MOUNT = "Raptor razzashi cuirassé";
+local FLYING_MOUNT = "Wyrm des braises incandescentes";
 
 SlashCmdList['HERO_MOUNT'] = function()
 
