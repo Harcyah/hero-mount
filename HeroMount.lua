@@ -13,6 +13,7 @@ local forceGroundMountZones = {
 }
 
 local GROUND_MOUNT = "Raptor razzashi cuirassé";
+local ROBOT_MOUNT = "Extracteur de bois mécanique";
 local FLYING_MOUNT = "Wyrm des braises incandescentes";
 
 SlashCmdList['HERO_MOUNT'] = function()
@@ -34,6 +35,11 @@ SlashCmdList['HERO_MOUNT'] = function()
 
 	if (IsShiftKeyDown()) then
 		CastSpellByName(GROUND_MOUNT)
+		return
+	end
+
+	if (IsControlKeyDown()) then
+		CastSpellByName(ROBOT_MOUNT)
 		return
 	end
 
