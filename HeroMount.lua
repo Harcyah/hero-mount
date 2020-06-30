@@ -9,7 +9,8 @@ end
 
 local forceGroundMountZones = {
 	'Séjour céleste',
-	"Mac’Aree"
+	"Mac’Aree",
+	"Le Maelström"
 }
 
 local GROUND_MOUNT = "Raptor razzashi cuirassé";
