@@ -15,10 +15,10 @@ local forceGroundMountZones = {
 
 local GROUND_MOUNT = "Raptor razzashi cuirassé";
 local ROBOT_MOUNT = "Extracteur de bois mécanique";
+local WATER_MOUNT = "Raie de la Grande mer";
 local FLYING_MOUNT = "Wyrm des braises incandescentes";
 
 SlashCmdList['HERO_MOUNT'] = function()
-
 	if (IsMounted()) then
 		Dismount()
 		return
@@ -44,8 +44,8 @@ SlashCmdList['HERO_MOUNT'] = function()
 		return
 	end
 
-	local name, instanceType = GetInstanceInfo()
-	if (instanceType == "scenario") then
+	local _, instanceType = GetInstanceInfo()
+	if (instanceType == "scenario" or instanceType == "pvp" or instanceType == "arena") then
 		CastSpellByName(GROUND_MOUNT)
 	end
 
@@ -54,10 +54,10 @@ SlashCmdList['HERO_MOUNT'] = function()
 		CastSpellByName(GROUND_MOUNT)
 	end
 
-	local timer, initial, maxvalue, scale, paused, label = GetMirrorTimerInfo(2)
+	local timer, _, _, _, paused, _ = GetMirrorTimerInfo(2)
 	if (timer == 'BREATH' and paused == 0) then
 		-- breath timer is running: player is underwater
-		CastSpellByName("Raie de la Grande mer")
+		CastSpellByName(WATER_MOUNT)
 		return
 	end
 
