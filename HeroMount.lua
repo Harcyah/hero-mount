@@ -10,6 +10,7 @@ end
 local forceGroundMountZones = {
 	'Séjour céleste',
 	"Mac’Aree",
+	"Tol Barad",
 	"Le Maelström"
 }
 
