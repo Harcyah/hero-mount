@@ -11,7 +11,8 @@ local forceGroundMountZones = {
 	'Séjour céleste',
 	"Mac’Aree",
 	"Tol Barad",
-	"Le Maelström"
+	"Le Maelström",
+	"L’île Vagabonde"
 }
 
 local GROUND_MOUNT = "Raptor razzashi cuirassé";
