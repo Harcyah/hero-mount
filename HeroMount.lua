@@ -8,11 +8,12 @@ local function has_value(tab, val)
 end
 
 local forceGroundMountZones = {
-	'Séjour céleste',
+	"Helheim",
+	"Le Maelström",
+	"L’île Vagabonde",
 	"Mac’Aree",
 	"Tol Barad",
-	"Le Maelström",
-	"L’île Vagabonde"
+	"Séjour céleste",
 }
 
 local GROUND_MOUNT = "Raptor razzashi cuirassé";
