@@ -21,18 +21,21 @@ local ROBOT_MOUNT = "Extracteur de bois mécanique";
 local WATER_MOUNT = "Raie de la Grande mer";
 local FLYING_MOUNT = "Wyrm des braises incandescentes";
 
+APPRENTICE_RIDING_LEVEL = 10
+EXPERT_RIDING_LEVEL = 30
+
 SlashCmdList['HERO_MOUNT'] = function()
 	if (IsMounted()) then
 		Dismount()
 		return
 	end
 
-	if (UnitLevel("player") < 20) then
+	if (UnitLevel("player") < APPRENTICE_RIDING_LEVEL) then
 		CastSpellByName("Invocation d’un chauffeur")
 		return
 	end
 
-	if (UnitLevel("player") < 60) then
+	if (UnitLevel("player") < EXPERT_RIDING_LEVEL) then
 		CastSpellByName(GROUND_MOUNT)
 		return
 	end
