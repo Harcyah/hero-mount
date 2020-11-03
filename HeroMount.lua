@@ -16,6 +16,7 @@ local forceGroundMountZones = {
 	"Séjour céleste",
 }
 
+local SURAMAR_MOUNT = "Sabre-de-mana d’arcaniste";
 local GROUND_MOUNT = "Raptor razzashi cuirassé";
 local ROBOT_MOUNT = "Extracteur de bois mécanique";
 local WATER_MOUNT = "Raie de la Grande mer";
@@ -56,6 +57,11 @@ SlashCmdList['HERO_MOUNT'] = function()
 	end
 
 	local zone = GetRealZoneText()
+	if (zone == "Suramar") then
+		CastSpellByName(SURAMAR_MOUNT)
+		return
+	end
+
 	if (has_value(forceGroundMountZones, zone)) then
 		CastSpellByName(GROUND_MOUNT)
 	end
