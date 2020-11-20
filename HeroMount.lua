@@ -8,19 +8,19 @@ local function has_value(tab, val)
 end
 
 local forceGroundMountZones = {
-	"Helheim",
-	"Le Maelström",
-	"L’île Vagabonde",
-	"Mac’Aree",
-	"Tol Barad",
-	"Séjour céleste",
+	'Helheim',
+	'Le Maelström',
+	'L’île Vagabonde',
+	'Mac’Aree',
+	'Tol Barad',
+	'Séjour céleste',
 }
 
-local SURAMAR_MOUNT = "Sabre-de-mana d’arcaniste";
-local GROUND_MOUNT = "Raptor razzashi cuirassé";
-local ROBOT_MOUNT = "Extracteur de bois mécanique";
-local WATER_MOUNT = "Raie de la Grande mer";
-local FLYING_MOUNT = "Wyrm des braises incandescentes";
+local SURAMAR_MOUNT = 'Sabre-de-mana d’arcaniste';
+local GROUND_MOUNT = 'Raptor razzashi cuirassé';
+local ROBOT_MOUNT = 'Extracteur de bois mécanique';
+local WATER_MOUNT = 'Raie de la Grande mer';
+local FLYING_MOUNT = 'Wyrm des braises incandescentes';
 
 APPRENTICE_RIDING_LEVEL = 10
 EXPERT_RIDING_LEVEL = 30
@@ -31,12 +31,12 @@ SlashCmdList['HERO_MOUNT'] = function()
 		return
 	end
 
-	if (UnitLevel("player") < APPRENTICE_RIDING_LEVEL) then
-		CastSpellByName("Invocation d’un chauffeur")
+	if (UnitLevel('player') < APPRENTICE_RIDING_LEVEL) then
+		CastSpellByName('Invocation d’un chauffeur')
 		return
 	end
 
-	if (UnitLevel("player") < EXPERT_RIDING_LEVEL) then
+	if (UnitLevel('player') < EXPERT_RIDING_LEVEL) then
 		CastSpellByName(GROUND_MOUNT)
 		return
 	end
@@ -52,12 +52,12 @@ SlashCmdList['HERO_MOUNT'] = function()
 	end
 
 	local _, instanceType = GetInstanceInfo()
-	if (instanceType == "scenario" or instanceType == "pvp" or instanceType == "arena") then
+	if (instanceType == 'scenario' or instanceType == 'pvp' or instanceType == 'arena') then
 		CastSpellByName(GROUND_MOUNT)
 	end
 
 	local zone = GetRealZoneText()
-	if (zone == "Suramar") then
+	if (zone == 'Suramar') then
 		CastSpellByName(SURAMAR_MOUNT)
 		return
 	end
