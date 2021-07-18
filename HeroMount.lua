@@ -22,8 +22,8 @@ local ROBOT_MOUNT = 'Extracteur de bois mécanique';
 local WATER_MOUNT = 'Raie de la Grande mer';
 local FLYING_MOUNT = 'Wyrm des braises incandescentes';
 
-APPRENTICE_RIDING_LEVEL = 10
-EXPERT_RIDING_LEVEL = 30
+local APPRENTICE_RIDING_LEVEL = 10
+local EXPERT_RIDING_LEVEL = 30
 
 SlashCmdList['HERO_MOUNT'] = function()
 	if (IsMounted()) then
