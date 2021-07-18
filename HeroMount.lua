@@ -7,7 +7,7 @@ local function has_value(tab, val)
     return false
 end
 
-local forceGroundMountZones = {
+local FORCE_GROUND_MOUNT_ZONES = {
 	'Helheim',
 	'Le Maelström',
 	'L’île Vagabonde',
@@ -62,7 +62,7 @@ SlashCmdList['HERO_MOUNT'] = function()
 		return
 	end
 
-	if (has_value(forceGroundMountZones, zone)) then
+	if (has_value(FORCE_GROUND_MOUNT_ZONES, zone)) then
 		CastSpellByName(GROUND_MOUNT)
 	end
 
