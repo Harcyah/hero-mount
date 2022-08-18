@@ -1,5 +1,5 @@
 ## Title: HeroMount
-## Interface: 90205
+## Interface: 90207
 ## Author: harcyah@gmail.com
 ## Notes: Adds a /heromount command which mount flyable/swimming/ground mount
 HeroMount.lua
